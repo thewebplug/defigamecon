@@ -22,6 +22,8 @@ export default function Home() {
   const auth = useSelector((state) => state.auth);
   const [events, setEvents] = useState([]);
   const [games, setGames] = useState([]);
+  const [active, setActive] = useState(false);
+
 
   const handleGetEvents = async () => {
     const response = await getAllEvents(auth?.token);
@@ -143,6 +145,7 @@ export default function Home() {
 
     const cardElement = document.getElementById(cardId);
     if (cardElement) {
+      setActive(false)
       console.log("cardElement", cardElement);
       cardElement.scrollIntoView({ behavior: "smooth" });
     }
@@ -156,7 +159,7 @@ export default function Home() {
         <main>
           <div className="nft-main">
             <img className="nft-main__img" src={Image8} alt="" />
-          <Header />
+          <Header active={active} setActive={setActive} />
             <div className="nft-main__hero">
               <div className="nft-main__hero__inner">
                 <div className="nft-main__hero__inner__title">
