@@ -1,6 +1,6 @@
-import Header from "../components/header";
+// import Header from "../components/header";
 import Explore from "../components/explore";
-import Footer from "../components/footer";
+// import Footer from "../components/footer";
 import EventCard from "../components/eventCard";
 import { getAllEvents } from "../apis";
 import { useEffect, useState } from "react";
@@ -26,7 +26,7 @@ export default function Events() {
     <>
       <br />
       <br />
-      <Header />
+      {/* <Header /> */}
       <main className="events">
         <div className="events__grid">
           {events?.map((event) => (
@@ -36,7 +36,7 @@ export default function Events() {
       </main>
 
       <Explore />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

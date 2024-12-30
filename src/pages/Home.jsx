@@ -5,9 +5,9 @@ import Image12 from "../assets/9999.png";
 import Image13 from "../assets/7878.png";
 import { useLayoutEffect, useState } from "react";
 import { useEffect } from "react";
-import Header from "../components/header";
+// import Header from "../components/header";
 import Explore from "../components/explore";
-import Footer from "../components/footer";
+// import Footer from "../components/footer";
 import EventCard from "../components/eventCard";
 import Partners from "../components/partners";
 import GameVideos from "../components/gameVideos";
@@ -159,7 +159,7 @@ export default function Home() {
         <main>
           <div className="nft-main">
             <img className="nft-main__img" src={Image8} alt="" />
-          <Header active={active} setActive={setActive} />
+          {/* <Header active={active} setActive={setActive} /> */}
             <div className="nft-main__hero">
               <div className="nft-main__hero__inner">
                 <div className="nft-main__hero__inner__title">
@@ -1571,7 +1571,7 @@ export default function Home() {
         <Explore />
         </main>
 
-      <Footer />
+      {/* <Footer /> */}
     
               </div>
 

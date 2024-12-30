@@ -1,6 +1,6 @@
-import Header from "../components/header";
+// import Header from "../components/header";
 import Explore from "../components/explore";
-import Footer from "../components/footer";
+// import Footer from "../components/footer";
 import Highlights from "../components/highlights";
 import ImageGrid from "../components/imageGrid";
 import EventBanner from "../components/eventBanner";
@@ -27,7 +27,7 @@ export default function Event() {
     <>
       <br />
       <br />
-      <Header />
+      {/* <Header /> */}
       <main className="event">
         <div className="event__title">
           {event?.title?.split(" ")[0] && (
@@ -76,7 +76,7 @@ export default function Event() {
       </main>
 
       <Explore />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
