@@ -125,14 +125,14 @@
             }
           }
   
-          // @keyframes marqueeX {
-          //   0% {
-          //     transform: translateX(0);
-          //   }
-          //   100% {
-          //     transform: translateX(calc(-650px * var(--item-count) - (20px * var(--item-count))));
-          //   }
-          // }
+          @keyframes marqueeX {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(calc(-650px * var(--item-count) - (20px * var(--item-count))));
+            }
+          }
         }
       }
     

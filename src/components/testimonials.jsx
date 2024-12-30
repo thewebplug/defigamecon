@@ -33,23 +33,23 @@ const testimonials = [
 export default function Testimonials() {
   const [duplicateCount, setDuplicateCount] = useState(2);
 
-  // useEffect(() => {
-  //   const calculateDuplicates = () => {
-  //     const viewportWidth = window.innerWidth;
-  //     const newDuplicateCount = Math.ceil((viewportWidth * 3) / (300 + 20)) + 1;
-  //     setDuplicateCount(newDuplicateCount);
-  //   };
+  useEffect(() => {
+    const calculateDuplicates = () => {
+      const viewportWidth = window.innerWidth;
+      const newDuplicateCount = Math.ceil((viewportWidth * 3) / (300 + 20)) + 1;
+      setDuplicateCount(newDuplicateCount);
+    };
 
-  //   calculateDuplicates();
-  //   window.addEventListener('resize', calculateDuplicates);
-  //   return () => window.removeEventListener('resize', calculateDuplicates);
-  // }, []);
+    calculateDuplicates();
+    window.addEventListener('resize', calculateDuplicates);
+    return () => window.removeEventListener('resize', calculateDuplicates);
+  }, []);
 
   const duplicatedItems = Array(duplicateCount).fill(testimonials).flat();
 
-  // useEffect(() => {
-  //   document.documentElement.style.setProperty('--item-count', testimonials.length);
-  // }, [testimonials.length]);
+  useEffect(() => {
+    document.documentElement.style.setProperty('--item-count', testimonials.length);
+  }, [testimonials.length]);
 
   return (
     <div className="testimonials">
